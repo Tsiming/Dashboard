@@ -9,5 +9,6 @@ export default {};
 <style>
 @import "./assets/css/main.css";
 @import "./assets/css/color-dark.css";
-/*@import  "~vue-tabulator/dist/scss/bootstrap/tabulator_bootstrap4";*/
+@import "~ag-grid-community/dist/styles/ag-grid.css";
+@import "~ag-grid-community/dist/styles/ag-theme-alpine.css";
 </style>

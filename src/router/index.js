@@ -1,15 +1,130 @@
 import {createRouter, createWebHistory} from "vue-router";
 import Home from "../views/Home.vue";
+import Test from "../views/Test.vue";
 
 const routes = [
     {
         path: '/',
         redirect: '/dashboard'
-    }, {
+    },
+    {
+        path: '/test',
+        name: "Test",
+        component: Test,
+    },
+     {
         path: "/",
         name: "Home",
         component: Home,
         children: [
+            {
+                path: "/project_manage",
+                name: "project_manage",
+                meta: {
+                    title: '测试管理'
+                },
+                component: () => import (
+                "../views/ProjectManage.vue")
+            },
+            {
+                path: "/template_manage",
+                name: "template_manage",
+                meta: {
+                    title: '模板管理'
+                },
+                component: () => import (
+                "../views/TemplateManage.vue")
+            },
+            {
+                path: "/testcase_manage",
+                name: "testcase_manage",
+                meta: {
+                    title: '测试用例管理'
+                },
+                component: () => import (
+                "../views/TemplateManage.vue")
+            },
+            {
+                path: "/testcase_template_manage",
+                name: "testcase_template_manage",
+                meta: {
+                    title: '测试用例模板'
+                },
+                component: () => import (
+                "../views/TestcaseTemplateManage.vue")
+            },
+            {
+                path: "/sys_project",
+                name: "sys_project",
+                meta: {
+                    title: '系统管理-测试项目'
+                },
+                component: () => import (
+                "../views/SysProject.vue")
+            },
+            {
+                path: "/sys_template",
+                name: "sys_template",
+                meta: {
+                    title: '系统管理-测试模板'
+                },
+                component: () => import (
+                "../views/SysTemplate.vue")
+            },
+            {
+                path: "/sys_testcase",
+                name: "sys_testcase",
+                meta: {
+                    title: '系统管理-测试用例'
+                },
+                component: () => import (
+                "../views/SysTestcase.vue")
+            },
+            {
+                path: "/sys_testcase_template",
+                name: "sys_testcase_template",
+                meta: {
+                    title: '系统管理-测试用例模板'
+                },
+                component: () => import (
+                "../views/SysTestcaseTemplate.vue")
+            },
+            {
+                path: "/sys_contorl_center",
+                name: "sys_contorl_center",
+                meta: {
+                    title: '系统管理-管理中心'
+                },
+                component: () => import (
+                "../views/SysContorlCenter.vue")
+            },
+            {
+                path: "/device_manage",
+                name: "device_manage",
+                meta: {
+                    title: '设备管理'
+                },
+                component: () => import (
+                "../views/DeviceManage.vue")
+            },
+            {
+                path: "/thirdparty_interface_manage",
+                name: "thirdparty_interface_manage",
+                meta: {
+                    title: '第三方接口管理'
+                },
+                component: () => import (
+                "../views/ThirdPartyInterface.vue")
+            },
+            {
+                path: "/user_manage",
+                name: "user_manage",
+                meta: {
+                    title: '用户管理'
+                },
+                component: () => import (
+                "../views/UserManage.vue")
+            },
             {
                 path: "/dashboard",
                 name: "dashboard",
